@@ -41,7 +41,7 @@ Words: **must** is a rule, **should** is the default, **may** is free. Where exi
 | Branches | `feat/…`, `fix/…`, `docs/…`, `chore/…` | `docs/guidelines` |
 | Commits and PR titles | Conventional Commits | `feat(snmp): add MikroTik profile` |
 
-Names are written the same in every language and never translated. Never use another company's name, mark or style in a name or logo. If a project talks to a third-party service, say "Not affiliated with X" in the footer.
+Names are written the same in every language and never translated. Never use another company's name, mark or style in a name or logo.
 
 Renaming a project keeps the old env variables, paths and tokens as read-only fallbacks for at least one minor version, and the README says so in one line.
 
