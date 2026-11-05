@@ -17,7 +17,7 @@
 </td>
 <td width="33%" align="center" valign="top">
 <br>
-<a href="https://github.com/yetysw/jade"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/jade.png" alt="" width="64" height="64"></a>
+<a href="https://github.com/yetysw/jade"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/jade.svg" alt="" width="64" height="64"></a>
 <h3><a href="https://github.com/yetysw/jade">Jade</a></h3>
 <p>A local-first document assistant for companies. Ask questions about your own documents.</p>
 <p><a href="https://github.com/yetysw/jade"><b>Repository</b></a></p>

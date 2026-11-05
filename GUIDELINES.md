@@ -92,7 +92,7 @@ Every yety site, doc and app uses one colour: **`#004AAD`**. There is no per-pro
 ### 3.3 Logo
 
 - SVG, `viewBox="0 0 64 64"`, a **rounded square** `<rect width="64" height="64" rx="15">` as ground, one simple glyph inside on the same grid, stroke widths 3 to 4.5, `stroke-linecap="round"`.
-- Ground is `#004AAD` with a white glyph.
+- Ground is `#111419` with `#eceef1` strokes and one project colour: jade `#3ddc97`, mccb `#4cc9f0`, mccs `#ff8fab`. `#004AAD` stays the colour of the sites, not of the project logos.
 - Must read at 16 px, no text, no gradient, no more than three colours.
 - Files at the root of the site: `favicon.svg`, `apple-touch-icon.png` (180), `og.png` (1200 x 630, the logo, the name, one sentence). Also keep PNG at 192, 512 and a maskable 512 for installable apps.
 - The organization logo is a white Y on a `#004AAD` rounded square.
