@@ -388,18 +388,14 @@ Every README has the same shape and stays short, about 150 lines at most: detail
 <h3>One sentence that says what it is.</h3>
 
 
-<br><br>
-
 [CI badge] [OpenSSF Scorecard badge] [OpenSSF Best Practices badge, if the project has one] [MIT badge]
 
-<br><br>
-
-<img src="docs/assets/screenshot.png" alt="..." width="100%">
-
 </div>
+
+Screenshots: [screenshots/](screenshots/)
 ```
 
-   Banner: `.github/assets/banner.svg`, 1280 x 280, ground `#07080a` with the 44 px grid, project logo at the left, the name, a short tagline, "a yety project" at the bottom right. Keep only the listed badges, in the default flat style: no language, test count, stack or version badges. 
+   Banner: `.github/assets/banner.svg`, 1280 x 280, ground `#07080a` with the 44 px grid, project logo at the left, the name, a short tagline, "a yety project" at the bottom right. No screenshot in the README: app screenshots go in a `screenshots/` folder at the root, and the README links to it once. No `<br>` for spacing. Keep only the listed badges, in the default flat style: no language, test count, stack or version badges. 
 2. **Overview**: 3 bullets. End with "Free, for good. MIT licence, no paid edition."
 3. **Quick start**: Docker commands, first login, what to do next. Where to back up.
 4. What it does / what it watches / features: concrete list.
