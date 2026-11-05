@@ -63,14 +63,14 @@ color-scheme:dark;
 --c-advisory:#f2b033;--c-advisory-ink:#f7c766;--c-advisory-soft:rgb(242 176 51 / .13);
 --c-warning:#ff5c5c;--c-warning-ink:#ff8a8a;--c-warning-soft:rgb(255 92 92 / .13);
 --c-info:#7da9ff;--c-info-ink:#b3ccff;--c-info-soft:rgb(125 169 255 / .13);
---c-primary:#eceef1;--c-on-primary:#07080a;
+--c-primary:#004AAD;--c-on-primary:#ffffff;
 --shadow-lift:0 1px 0 rgb(255 255 255 / .02) inset,0 1px 2px rgb(0 0 0 / .5);
 --shadow-float:0 2px 8px rgb(0 0 0 / .5),0 24px 48px -16px rgb(0 0 0 / .8);
 --font-ui:'Inter','Segoe UI',system-ui,sans-serif;
 --font-code:'JetBrains Mono',ui-monospace,monospace;
 --radius-plate:6px;--radius-btn:8px;--radius-card:12px;--gutter:16px;
 --ease:cubic-bezier(.16,1,.3,1);
---accent:#7da9ff;--accent-ink:#b3ccff;--accent-rgb:125 169 255;   /* per project */
+--accent:#004AAD;--accent-ink:#7AA7F0;--accent-rgb:0 74 173;
 }
 @media (min-width:600px){:root{--gutter:24px}}
 ```
@@ -242,11 +242,11 @@ On `/download/#support`. Wording: "Every yety tool is free. If one saves you tim
 
 ### 4.6 Languages and URLs
 
-- **Nine locales**: `en` (source), `fr`, `de`, `es`, `it`, `pt`, `pt-BR`, `ru`, `zh-Hans`.
+- **Four locales**: `en` (source), `fr`, `de`, `it`. Docs may stay in English.
 - URL scheme: English at the root (`/features/`), others under a prefix (`/fr/features/`, `/pt-BR/features/`, `/zh-Hans/`). `/docs/` and `/demo/` stay at the root.
 - One string file per language, flat keys, `en.json` is the base, a missing key falls back to English, an unknown key stops the build. Do not rename keys.
 - Translators: translate values only, keep HTML tags and placeholders (`{version}`), never translate product names, commands, ports, file names, code or `<code>` content. `*_meta_title` under about 70 characters, `*_meta_desc` under about 170, plain text. Keep every warning at full strength. Prefer an everyday word to a technical one when both are correct.
-- First visit to the English root picks the language from `navigator.languages` (English when none of the nine matches). The selector remembers an explicit choice.
+- First visit to the English root picks the language from `navigator.languages` (English when none of the four matches). The selector remembers an explicit choice.
 - `<html lang="…" dir="ltr">` on each page.
 
 ### 4.7 SEO checklist
