@@ -32,12 +32,8 @@
 </tr>
 </table>
 
-<br>
-
 YETY is an IT company in Switzerland. We work with open-source software every day and we love it.<br>
 The tools we build for sysadmins, and a few other things, are free and open source, for anyone to use.
-
-<br>
 
 <a href="mailto:hello@yety.ch">hello@yety.ch</a>
 
