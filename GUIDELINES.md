@@ -238,7 +238,7 @@ Links are 40 px tall, `14px` (last line `13px`). The hub (`open.yety.ch`) has no
 
 ### 4.5 Support block
 
-On `/download/#support`. Wording: "Every yety tool is free. If one saves you time, you can support its development." Then the primary button **Sponsor us on GitHub** (`https://github.com/sponsors/yetysw`). No other payment method.
+On `/download/#support` and on the home of the `open` site. Wording: "Every yety tool is free. If one saves you time, you can support its development." Then one line: the primary button **Sponsor us on GitHub** (`https://github.com/sponsors/yetysw`) and, at the right, the Bitcoin, Ethereum and Solana chips, which copy the address and show it on click. Crypto addresses appear on the sites only, never in a repository.
 
 ### 4.6 Languages and URLs
 
@@ -461,7 +461,7 @@ Outside the gate: CodeQL, a weekly Trivy scan of the published images and an OSV
 
 ### 7.8 Sponsor button
 
-Money goes through GitHub Sponsors: [github.com/sponsors/yetysw](https://github.com/sponsors/yetysw). Once the organization is accepted, every repository turns on *Settings > General > Features > Sponsorships* and inherits `.github/FUNDING.yml` from this repository.
+Money goes through GitHub Sponsors: [github.com/sponsors/yetysw](https://github.com/sponsors/yetysw). Every repository turns on *Settings > General > Features > Sponsorships* and inherits `.github/FUNDING.yml` from this repository.
 
 ## 8. New project checklist
 
