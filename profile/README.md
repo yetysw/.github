@@ -4,12 +4,7 @@
 
 <h3>We are sysadmins in Switzerland. We build tools that make sysadmins' lives better, and we share them.</h3>
 
-<a href="https://www.yety.ch"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-website.svg" alt="Website: yety.ch" height="40"></a>
-<a href="https://github.com/sponsors/yetysw"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-sponsor.svg" alt="Sponsor us on GitHub" height="40"></a>
-<a href="https://github.com/yetysw/.github/blob/main/SECURITY.md"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-security.svg" alt="Security policy" height="40"></a>
-<a href="https://github.com/yetysw/.github/blob/main/GUIDELINES.md"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-guidelines.svg" alt="Project guidelines" height="40"></a>
-
-<br>
+<p><a href="https://www.yety.ch">yety.ch</a> &nbsp;·&nbsp; <a href="https://github.com/sponsors/yetysw">Sponsor</a> &nbsp;·&nbsp; <a href="https://github.com/yetysw/.github/blob/main/SECURITY.md">Security</a> &nbsp;·&nbsp; <a href="https://github.com/yetysw/.github/blob/main/GUIDELINES.md">Guidelines</a></p>
 
 <table>
 <tr>
@@ -22,7 +17,7 @@
 </td>
 <td width="33%" align="center" valign="top">
 <br>
-<a href="https://github.com/yetysw/jade"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/jade.png" alt="" width="64" height="64"></a>
+<a href="https://github.com/yetysw/jade"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/jade.svg" alt="" width="64" height="64"></a>
 <h3><a href="https://github.com/yetysw/jade">Jade</a></h3>
 <p>A local-first document assistant for companies. Ask questions about your own documents.</p>
 <p><a href="https://github.com/yetysw/jade"><b>Repository</b></a></p>
@@ -37,12 +32,8 @@
 </tr>
 </table>
 
-<br>
-
 YETY is an IT company in Switzerland. We work with open-source software every day and we love it.<br>
 The tools we build for sysadmins, and a few other things, are free and open source, for anyone to use.
-
-<br>
 
 <a href="mailto:hello@yety.ch">hello@yety.ch</a>
 

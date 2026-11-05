@@ -41,7 +41,7 @@ Words: **must** is a rule, **should** is the default, **may** is free. Where exi
 | Branches | `feat/…`, `fix/…`, `docs/…`, `chore/…` | `docs/guidelines` |
 | Commits and PR titles | Conventional Commits | `feat(snmp): add MikroTik profile` |
 
-Names are written the same in every language and never translated. Never use another company's name, mark or style in a name or logo. If a project talks to a third-party service, say "Not affiliated with X" in the footer.
+Names are written the same in every language and never translated. Never use another company's name, mark or style in a name or logo.
 
 Renaming a project keeps the old env variables, paths and tokens as read-only fallbacks for at least one minor version, and the README says so in one line.
 
@@ -63,14 +63,14 @@ color-scheme:dark;
 --c-advisory:#f2b033;--c-advisory-ink:#f7c766;--c-advisory-soft:rgb(242 176 51 / .13);
 --c-warning:#ff5c5c;--c-warning-ink:#ff8a8a;--c-warning-soft:rgb(255 92 92 / .13);
 --c-info:#7da9ff;--c-info-ink:#b3ccff;--c-info-soft:rgb(125 169 255 / .13);
---c-primary:#eceef1;--c-on-primary:#07080a;
+--c-primary:#004AAD;--c-on-primary:#ffffff;
 --shadow-lift:0 1px 0 rgb(255 255 255 / .02) inset,0 1px 2px rgb(0 0 0 / .5);
 --shadow-float:0 2px 8px rgb(0 0 0 / .5),0 24px 48px -16px rgb(0 0 0 / .8);
 --font-ui:'Inter','Segoe UI',system-ui,sans-serif;
 --font-code:'JetBrains Mono',ui-monospace,monospace;
 --radius-plate:6px;--radius-btn:8px;--radius-card:12px;--gutter:16px;
 --ease:cubic-bezier(.16,1,.3,1);
---accent:#7da9ff;--accent-ink:#b3ccff;--accent-rgb:125 169 255;   /* per project */
+--accent:#004AAD;--accent-ink:#7AA7F0;--accent-rgb:0 74 173;
 }
 @media (min-width:600px){:root{--gutter:24px}}
 ```
@@ -92,7 +92,7 @@ Every yety site, doc and app uses one colour: **`#004AAD`**. There is no per-pro
 ### 3.3 Logo
 
 - SVG, `viewBox="0 0 64 64"`, a **rounded square** `<rect width="64" height="64" rx="15">` as ground, one simple glyph inside on the same grid, stroke widths 3 to 4.5, `stroke-linecap="round"`.
-- Ground is `#004AAD` with a white glyph.
+- Ground is `#111419` with `#eceef1` strokes and one project colour: jade `#3ddc97`, mccb `#4cc9f0`, mccs `#ff8fab`. `#004AAD` stays the colour of the sites, not of the project logos.
 - Must read at 16 px, no text, no gradient, no more than three colours.
 - Files at the root of the site: `favicon.svg`, `apple-touch-icon.png` (180), `og.png` (1200 x 630, the logo, the name, one sentence). Also keep PNG at 192, 512 and a maskable 512 for installable apps.
 - The organization logo is a white Y on a `#004AAD` rounded square.
@@ -238,15 +238,15 @@ Links are 40 px tall, `14px` (last line `13px`). The hub (`open.yety.ch`) has no
 
 ### 4.5 Support block
 
-On `/download/#support`. Wording: "Every yety tool is free. If one saves you time, you can support its development." Then the primary button **Sponsor us on GitHub** (`https://github.com/sponsors/yetysw`). No other payment method.
+On `/download/#support` and on the home of the `open` site. Wording: "Every yety tool is free. If one saves you time, you can support its development." Then one line: the primary button **Sponsor us on GitHub** (`https://github.com/sponsors/yetysw`) and, at the right, the Bitcoin, Ethereum and Solana chips, which copy the address and show it on click. Crypto addresses appear on the sites only, never in a repository.
 
 ### 4.6 Languages and URLs
 
-- **Nine locales**: `en` (source), `fr`, `de`, `es`, `it`, `pt`, `pt-BR`, `ru`, `zh-Hans`.
+- **Four locales**: `en` (source), `fr`, `de`, `it`. Docs may stay in English.
 - URL scheme: English at the root (`/features/`), others under a prefix (`/fr/features/`, `/pt-BR/features/`, `/zh-Hans/`). `/docs/` and `/demo/` stay at the root.
 - One string file per language, flat keys, `en.json` is the base, a missing key falls back to English, an unknown key stops the build. Do not rename keys.
 - Translators: translate values only, keep HTML tags and placeholders (`{version}`), never translate product names, commands, ports, file names, code or `<code>` content. `*_meta_title` under about 70 characters, `*_meta_desc` under about 170, plain text. Keep every warning at full strength. Prefer an everyday word to a technical one when both are correct.
-- First visit to the English root picks the language from `navigator.languages` (English when none of the nine matches). The selector remembers an explicit choice.
+- First visit to the English root picks the language from `navigator.languages` (English when none of the four matches). The selector remembers an explicit choice.
 - `<html lang="…" dir="ltr">` on each page.
 
 ### 4.7 SEO checklist
@@ -257,8 +257,8 @@ Every page, checked by the build (fail on any miss):
 - [ ] `<meta name="description">` unique, at most 170 characters.
 - [ ] Exactly one `<h1>`.
 - [ ] `<link rel="canonical">` with the absolute URL.
-- [ ] `hreflang` for the nine codes plus `x-default` (English), the same list on every language version.
-- [ ] Open Graph: `og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:locale`, eight `og:locale:alternate`, `og:image` (`https://<name>.open.yety.ch/og.png`, 1200 x 630) with `og:image:alt`. Twitter: `summary_large_image` plus title, description, image, alt.
+- [ ] `hreflang` for the four codes plus `x-default` (English), the same list on every language version.
+- [ ] Open Graph: `og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:locale`, three `og:locale:alternate`, `og:image` (`https://<name>.open.yety.ch/og.png`, 1200 x 630) with `og:image:alt`. Twitter: `summary_large_image` plus title, description, image, alt.
 - [ ] JSON-LD in `<script type="application/ld+json">`: home is `SoftwareApplication` (`name`, `description`, `url`, `applicationCategory`, `operatingSystem: "Linux (Docker)"`, `isAccessibleForFree: true`, `license: https://opensource.org/licenses/MIT`, `offers` price `0`, `codeRepository`, `publisher` yety). Inner pages are `WebPage` with `isPartOf` the `WebSite` and `about` the software; the download page adds `softwareVersion` and `downloadUrl`.
 - [ ] `sitemap.xml` lists every page with `lastmod` and the `xhtml:link` alternates for all languages. The docs add `/docs/sitemap-index.xml`, listed in `robots.txt`.
 - [ ] `robots.txt`: everything allowed, crawlers of AI search and assistants are welcome and listed by name, `Sitemap:` lines.
@@ -305,7 +305,7 @@ Every page, checked by the build (fail on any miss):
 
 - **Where**: `https://<name>.open.yety.ch/docs/`, in the same Pages project as the site. No Read the Docs, no separate domain.
 - **Stack**: the shared docs kit, built on Starlight (Astro) with Pagefind search, tree on the left, table of contents on the right, dark and light themes, the project accent. The kit is written once; a project brings only a config and its sources.
-- **Sources stay in the project repository** under `docs/` as plain Markdown, converted at deploy time (Sphinx/MyST, MkDocs or plain Markdown are all accepted). Translations use the suffix `page.fr.md` next to `page.md`, for the nine locales; the English page is the fallback.
+- **Sources stay in the project repository** under `docs/` as plain Markdown, converted at deploy time (Sphinx/MyST, MkDocs or plain Markdown are all accepted). Translations use the suffix `page.fr.md` next to `page.md`, for the four locales; the English page is the fallback.
 - **Config** per project (`project.config.json`): `name`, `title`, `description`, `subdomain`, `repo` (`yetysw/<name>`), `accent` (`green`, `blue`, `violet`, `amber` or a `{dark, light}` object), `logo`, `lang`, `locales`, `source`.
 - **Structure** (order of the sidebar):
   1. Home: what it is, a screenshot, three entry links (Install, first steps, the main concept).
@@ -348,7 +348,7 @@ The product UI is not the marketing site: it is where the work happens. DumbMoni
 |---|---|---|---|
 | Framework | Svelte 5 (runes only) | React | Choose by team. Same tokens either way |
 | Themes | Obsidian (dark default) plus a light console theme and public status pages | Dark and light, follows the system | Dark default; light optional, same token names |
-| UI language | Nine locales with Paraglide | English only | **Nine locales** if the app is for end users (below); English only is acceptable for an expert tool, and then say so |
+| UI language | Nine locales with Paraglide | English only | **Four locales** if the app is for end users (below); English only is acceptable for an expert tool, and then say so |
 | Brand hue in the app | Status hues only | No brand hue, hues = sensor family | No brand hue in the app. The accent is for sites |
 | Type | Geist and Geist Mono | Inter and JetBrains Mono | Inter and JetBrains Mono |
 
@@ -388,18 +388,14 @@ Every README has the same shape and stays short, about 150 lines at most: detail
 <h3>One sentence that says what it is.</h3>
 
 
-<br><br>
-
 [CI badge] [OpenSSF Scorecard badge] [OpenSSF Best Practices badge, if the project has one] [MIT badge]
 
-<br><br>
-
-<img src="docs/assets/screenshot.png" alt="..." width="100%">
-
 </div>
+
+Screenshots: [screenshots/](screenshots/)
 ```
 
-   Banner: `.github/assets/banner.svg`, 1280 x 280, ground `#07080a` with the 44 px grid, project logo at the left, the name, a short tagline, "a yety project" at the bottom right. Keep only the listed badges, in the default flat style: no language, test count, stack or version badges. 
+   Banner: `.github/assets/banner.svg`, 1280 x 280, ground `#07080a` with the 44 px grid, project logo at the left, the name, a short tagline, "a yety project" at the bottom right. No screenshot in the README: app screenshots go in a `screenshots/` folder at the root, and the README links to it once. No `<br>` for spacing. Keep only the listed badges, in the default flat style: no language, test count, stack or version badges. 
 2. **Overview**: 3 bullets. End with "Free, for good. MIT licence, no paid edition."
 3. **Quick start**: Docker commands, first login, what to do next. Where to back up.
 4. What it does / what it watches / features: concrete list.
@@ -465,7 +461,7 @@ Outside the gate: CodeQL, a weekly Trivy scan of the published images and an OSV
 
 ### 7.8 Sponsor button
 
-Money goes through GitHub Sponsors: [github.com/sponsors/yetysw](https://github.com/sponsors/yetysw). Once the organization is accepted, every repository turns on *Settings > General > Features > Sponsorships* and inherits `.github/FUNDING.yml` from this repository.
+Money goes through GitHub Sponsors: [github.com/sponsors/yetysw](https://github.com/sponsors/yetysw). Every repository turns on *Settings > General > Features > Sponsorships* and inherits `.github/FUNDING.yml` from this repository.
 
 ## 8. New project checklist
 
@@ -478,7 +474,7 @@ In this order.
 5. Make it run with `docker compose up -d` from a published image; write `.env.example`; add CI (7.5) with pinned actions (7.6) and the release workflow with SBOM, provenance and signatures.
 6. Write `docs/` and add the project config to the docs kit (section 5); check links.
 7. Build the site: tokens, top bar, hero with plates and rotating word, interactive animation, features with "what it does not do", download with Support block, footer and yety bar, 404 (section 4).
-8. Fill the nine string files; check titles, descriptions, hreflang, sitemap, `robots.txt`, `llms.txt`, JSON-LD (4.7).
+8. Fill the string files of the three translated languages; check titles, descriptions, hreflang, sitemap, `robots.txt`, `llms.txt`, JSON-LD (4.7).
 9. Build the static demo with fictional data and its CSP (4.9).
 10. Run the checks: 390 px without horizontal scroll, keyboard only, reduced motion, contrast, headers, no inline style, no external request.
 11. Create the Cloudflare Pages project `<name>`, point `<name>.open.yety.ch` at it, deploy.
