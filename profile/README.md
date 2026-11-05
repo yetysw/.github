@@ -2,7 +2,7 @@
 
 <a href="https://www.yety.ch"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/banner.svg" alt="yety: homemade IT tools, shared" width="100%"></a>
 
-<h3>We are sysadmins in Switzerland. When something gets in our way, we build a tool and share it.</h3>
+<h3>We are sysadmins in Switzerland. We build tools that make sysadmins' lives better, and we share them.</h3>
 
 <a href="https://www.yety.ch"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-website.svg" alt="Website: yety.ch" height="40"></a>
 <a href="https://github.com/sponsors/yetysw"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-sponsor.svg" alt="Sponsor us on GitHub" height="40"></a>
@@ -29,10 +29,10 @@
 </td>
 <td width="33%" align="center" valign="top">
 <br>
-<a href="https://github.com/yetysw/config-auto-messagerie"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/mailsetup.svg" alt="" width="64" height="64"></a>
-<h3><a href="https://github.com/yetysw/config-auto-messagerie">Mail Setup</a></h3>
+<a href="https://github.com/yetysw/mccs"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/mccs.svg" alt="" width="64" height="64"></a>
+<h3><a href="https://github.com/yetysw/mccs">mccs</a></h3>
 <p>A self-hosted, white-label wizard that guides users through setting up mail, calendar and contacts on their devices.</p>
-<p><a href="https://github.com/yetysw/config-auto-messagerie"><b>Repository</b></a></p>
+<p><a href="https://github.com/yetysw/mccs"><b>Repository</b></a></p>
 </td>
 </tr>
 </table>
@@ -40,7 +40,7 @@
 <br>
 
 YETY is an IT company in Switzerland. We work with open-source software every day and we love it.<br>
-The tools we build to make our own work simpler are free and open source, for anyone to use.
+The tools we build for sysadmins, and a few other things, are free and open source, for anyone to use.
 
 <br>
 
