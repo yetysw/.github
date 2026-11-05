@@ -2,7 +2,7 @@
 
 How a yety project looks, reads and is built. Written so that anyone, person or program, can start a new project that sits next to the existing ones without asking. Free to read and reuse.
 
-Reference implementations, all public: [mccb](https://github.com/yetysw/mccb), [Jade](https://github.com/yetysw/jade) and [Mail Setup](https://github.com/yetysw/config-auto-messagerie). These rules come from the [selfhostr guidelines](https://github.com/selfhostr/.github/blob/main/GUIDELINES.md); DumbMonit and SuckerPot, cited below as examples, are yety projects. Existing yety tools move to these rules when they are next worked on.
+Reference implementations, all public: [mccb](https://github.com/yetysw/mccb), [Jade](https://github.com/yetysw/jade) and [mccs](https://github.com/yetysw/mccs). yety builds tools that make sysadmins' lives better, among other things. These rules come from the [selfhostr guidelines](https://github.com/selfhostr/.github/blob/main/GUIDELINES.md); DumbMonit and SuckerPot, cited below as examples, are yety projects. Existing yety tools move to these rules when they are next worked on.
 
 Words: **must** is a rule, **should** is the default, **may** is free. Where existing projects differ, the section says so and gives the rule for new ones.
 
@@ -28,9 +28,9 @@ Words: **must** is a rule, **should** is the default, **may** is free. Where exi
 | Project name in prose | As written in the README title. Lowercase for newer projects | `mccb`, `jade` |
 | New project name | **Lowercase, one word, no hyphen, no version** | `mccb` |
 | Repository | `github.com/yetysw/<name>`, lowercase | `yetysw/mccb` |
-| Site | `<name>.yety.ch` | `https://mccb.yety.ch` |
-| Docs | `https://<name>.yety.ch/docs/` | |
-| Demo | `https://<name>.yety.ch/demo/` | |
+| Site | `<name>.open.yety.ch` | `https://mccb.yety.ch` |
+| Docs | `https://<name>.open.yety.ch/docs/` | |
+| Demo | `https://<name>.open.yety.ch/demo/` | |
 | Images | `ghcr.io/yetysw/<name>`, plus `-agent` or another suffix for a second image | `ghcr.io/yetysw/dumbmonit` |
 | Image tags | `X.Y.Z`, `X.Y`, `latest` (stable), `edge` (from `dev`) | |
 | Cloudflare Pages project | Same as the subdomain | `mccb` |
@@ -77,20 +77,25 @@ color-scheme:dark;
 
 `<meta name="theme-color" content="#07080a">` and `<meta name="color-scheme" content="dark">` on every page.
 
-### 3.2 One accent per project
+### 3.2 Brand colour
 
-One hue per project, used for the logo, the rotating hero word, the focus of the demo, icons in `.icon`, the pressed state of demo buttons. Never for body text, never for status. Status colours (`signal`, `advisory`, `warning`, `info`) keep their meaning everywhere.
+Every yety site, doc and app uses one colour: **`#004AAD`**. There is no per-project colour.
 
+| Token | Value | Use |
+|---|---|---|
+| `--accent` | `#004AAD` | Logo ground, buttons and filled surfaces, with white text (8.1:1) |
+| `--accent-ink` | `#7AA7F0` | Links, icons, the rotating hero word and focus on dark grounds (8.2:1 on `#07080a`) |
+| `--accent-rgb` | `0 74 173` | Tints and borders |
 
-A project accent must be clearly distinct from the accents of the other yety projects, reach 4.5:1 for `--accent-ink` on `--c-canvas`, and not be a status hue (no green close to `#2fd17c`, no red close to `#ff5c5c`).
+`#004AAD` on a dark ground reaches only 2.5:1: never use it for text there. On a light ground it is the text colour too (7.6:1). Never use it for status. Status colours (`signal`, `advisory`, `warning`, `info`) keep their meaning everywhere.
 
 ### 3.3 Logo
 
 - SVG, `viewBox="0 0 64 64"`, a **rounded square** `<rect width="64" height="64" rx="15">` as ground, one simple glyph inside on the same grid, stroke widths 3 to 4.5, `stroke-linecap="round"`.
-- Ground is `#111419` (or `#17181c`) with an accent glyph and `#eceef1` for the secondary stroke. A project may fill the ground with its accent and use a near-black glyph.
+- Ground is `#004AAD` with a white glyph.
 - Must read at 16 px, no text, no gradient, no more than three colours.
 - Files at the root of the site: `favicon.svg`, `apple-touch-icon.png` (180), `og.png` (1200 x 630, the logo, the name, one sentence). Also keep PNG at 192, 512 and a maskable 512 for installable apps.
-- The organization logo is a white Y on a black rounded square.
+- The organization logo is a white Y on a `#004AAD` rounded square.
 
 Example (mccb):
 
@@ -224,12 +229,12 @@ Same on every site. The project row (brand, links), then one small line inside t
 <footer class="sh-foot"><div class="wrap">
 <div class="sh-f-main"><a class="sh-f-brand" href="/">[logo 24]mccb</a>
 <nav aria-label="Footer"><a href="/features/">Features</a><a href="/download/">Download</a><a href="https://mccb.yety.ch/demo/">Demo</a><a href="https://mccb.yety.ch/docs/">Docs</a><a href="https://github.com/yetysw/mccb">GitHub</a><a href="/download/#support">Support the project</a><a href="https://github.com/yetysw/mccb/blob/main/LICENSE">MIT licence</a></nav></div>
-<div class="sh-f-bar"><a class="sh-home" href="https://yety.ch">[yety logo 18]<span>A <b>yety</b> project</span><span class="sh-all">Discover all our projects</span></a></div>
+<div class="sh-f-bar"><a class="sh-home" href="https://open.yety.ch">[yety logo 18]<span>A <b>yety</b> project</span><span class="sh-all">Discover all our projects</span></a></div>
 <p class="sh-note">Optional disclaimer line, 12px, --c-ink-3.</p>
 </div></footer>
 ```
 
-Links are 40 px tall, `14px` (last line `13px`). The hub (`yety.ch`) has no footer.
+Links are 40 px tall, `14px` (last line `13px`). The hub (`open.yety.ch`) has no footer.
 
 ### 4.5 Support block
 
@@ -253,7 +258,7 @@ Every page, checked by the build (fail on any miss):
 - [ ] Exactly one `<h1>`.
 - [ ] `<link rel="canonical">` with the absolute URL.
 - [ ] `hreflang` for the nine codes plus `x-default` (English), the same list on every language version.
-- [ ] Open Graph: `og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:locale`, eight `og:locale:alternate`, `og:image` (`https://<name>.yety.ch/og.png`, 1200 x 630) with `og:image:alt`. Twitter: `summary_large_image` plus title, description, image, alt.
+- [ ] Open Graph: `og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:locale`, eight `og:locale:alternate`, `og:image` (`https://<name>.open.yety.ch/og.png`, 1200 x 630) with `og:image:alt`. Twitter: `summary_large_image` plus title, description, image, alt.
 - [ ] JSON-LD in `<script type="application/ld+json">`: home is `SoftwareApplication` (`name`, `description`, `url`, `applicationCategory`, `operatingSystem: "Linux (Docker)"`, `isAccessibleForFree: true`, `license: https://opensource.org/licenses/MIT`, `offers` price `0`, `codeRepository`, `publisher` yety). Inner pages are `WebPage` with `isPartOf` the `WebSite` and `about` the software; the download page adds `softwareVersion` and `downloadUrl`.
 - [ ] `sitemap.xml` lists every page with `lastmod` and the `xhtml:link` alternates for all languages. The docs add `/docs/sitemap-index.xml`, listed in `robots.txt`.
 - [ ] `robots.txt`: everything allowed, crawlers of AI search and assistants are welcome and listed by name, `Sitemap:` lines.
@@ -298,7 +303,7 @@ Every page, checked by the build (fail on any miss):
 
 ## 5. Documentation
 
-- **Where**: `https://<name>.yety.ch/docs/`, in the same Pages project as the site. No Read the Docs, no separate domain.
+- **Where**: `https://<name>.open.yety.ch/docs/`, in the same Pages project as the site. No Read the Docs, no separate domain.
 - **Stack**: the shared docs kit, built on Starlight (Astro) with Pagefind search, tree on the left, table of contents on the right, dark and light themes, the project accent. The kit is written once; a project brings only a config and its sources.
 - **Sources stay in the project repository** under `docs/` as plain Markdown, converted at deploy time (Sphinx/MyST, MkDocs or plain Markdown are all accepted). Translations use the suffix `page.fr.md` next to `page.md`, for the nine locales; the English page is the fallback.
 - **Config** per project (`project.config.json`): `name`, `title`, `description`, `subdomain`, `repo` (`yetysw/<name>`), `accent` (`green`, `blue`, `violet`, `amber` or a `{dark, light}` object), `logo`, `lang`, `locales`, `source`.
@@ -378,14 +383,10 @@ Every README has the same shape and stays short, about 150 lines at most: detail
 ```html
 <div align="center">
 
-<a href="https://<name>.yety.ch"><img src=".github/assets/banner.svg" alt="<name>: <tagline>" width="100%"></a>
+<a href="https://<name>.open.yety.ch"><img src=".github/assets/banner.svg" alt="<name>: <tagline>" width="100%"></a>
 
 <h3>One sentence that says what it is.</h3>
 
-<a href="https://<name>.yety.ch"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-site.svg" alt="Website" height="40"></a>
-<a href="https://<name>.yety.ch/docs/"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-docs.svg" alt="Documentation" height="40"></a>
-<a href="https://<name>.yety.ch/demo/"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-demo.svg" alt="Live demo" height="40"></a>
-<a href="https://github.com/yetysw/<name>/releases"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-releases.svg" alt="Releases" height="40"></a>
 
 <br><br>
 
@@ -398,7 +399,7 @@ Every README has the same shape and stays short, about 150 lines at most: detail
 </div>
 ```
 
-   Banner: `.github/assets/banner.svg`, 1280 x 280, ground `#07080a` with the 44 px grid, project logo at the left, the name, a short tagline, "a yety project" at the bottom right. Keep only the listed badges, in the default flat style: no language, test count, stack or version badges. Leave out the demo or releases button if the project has neither.
+   Banner: `.github/assets/banner.svg`, 1280 x 280, ground `#07080a` with the 44 px grid, project logo at the left, the name, a short tagline, "a yety project" at the bottom right. Keep only the listed badges, in the default flat style: no language, test count, stack or version badges. 
 2. **Overview**: 3 bullets. End with "Free, for good. MIT licence, no paid edition."
 3. **Quick start**: Docker commands, first login, what to do next. Where to back up.
 4. What it does / what it watches / features: concrete list.
@@ -470,7 +471,7 @@ Money goes through GitHub Sponsors: [github.com/sponsors/yetysw](https://github.
 
 In this order.
 
-1. Pick a lowercase name; check `<name>.yety.ch`, `yetysw/<name>` and `ghcr.io/yetysw/<name>` are free.
+1. Pick a lowercase name; check `<name>.open.yety.ch`, `yetysw/<name>` and `ghcr.io/yetysw/<name>` are free.
 2. Choose an accent (3.2) and draw the logo on the 64 grid (3.3).
 3. Create the repository under `yetysw` with MIT licence, `dev` as the working branch, rulesets (7.4), security features on and the Sponsor button on (7.8).
 4. Add the root files and `.github/` of 7.1, `CODEOWNERS` with both owners, README in the shape of 7.2, with its banner and the Support section.
@@ -480,7 +481,7 @@ In this order.
 8. Fill the nine string files; check titles, descriptions, hreflang, sitemap, `robots.txt`, `llms.txt`, JSON-LD (4.7).
 9. Build the static demo with fictional data and its CSP (4.9).
 10. Run the checks: 390 px without horizontal scroll, keyboard only, reduced motion, contrast, headers, no inline style, no external request.
-11. Create the Cloudflare Pages project `<name>`, point `<name>.yety.ch` at it, deploy.
+11. Create the Cloudflare Pages project `<name>`, point `<name>.open.yety.ch` at it, deploy.
 12. Add the project to the hub site, to the organization profile (`profile/README.md` in this repository, with its logo in `profile/assets/` and in the banner) and to the table in `SECURITY.md`.
 13. Apply for the OpenSSF Best Practices badge, enable Scorecard, add both badges to the README.
 14. Tag `v0.1.0` from `main` only when the owners agree.
