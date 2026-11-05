@@ -257,8 +257,8 @@ Every page, checked by the build (fail on any miss):
 - [ ] `<meta name="description">` unique, at most 170 characters.
 - [ ] Exactly one `<h1>`.
 - [ ] `<link rel="canonical">` with the absolute URL.
-- [ ] `hreflang` for the nine codes plus `x-default` (English), the same list on every language version.
-- [ ] Open Graph: `og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:locale`, eight `og:locale:alternate`, `og:image` (`https://<name>.open.yety.ch/og.png`, 1200 x 630) with `og:image:alt`. Twitter: `summary_large_image` plus title, description, image, alt.
+- [ ] `hreflang` for the four codes plus `x-default` (English), the same list on every language version.
+- [ ] Open Graph: `og:type`, `og:site_name`, `og:title`, `og:description`, `og:url`, `og:locale`, three `og:locale:alternate`, `og:image` (`https://<name>.open.yety.ch/og.png`, 1200 x 630) with `og:image:alt`. Twitter: `summary_large_image` plus title, description, image, alt.
 - [ ] JSON-LD in `<script type="application/ld+json">`: home is `SoftwareApplication` (`name`, `description`, `url`, `applicationCategory`, `operatingSystem: "Linux (Docker)"`, `isAccessibleForFree: true`, `license: https://opensource.org/licenses/MIT`, `offers` price `0`, `codeRepository`, `publisher` yety). Inner pages are `WebPage` with `isPartOf` the `WebSite` and `about` the software; the download page adds `softwareVersion` and `downloadUrl`.
 - [ ] `sitemap.xml` lists every page with `lastmod` and the `xhtml:link` alternates for all languages. The docs add `/docs/sitemap-index.xml`, listed in `robots.txt`.
 - [ ] `robots.txt`: everything allowed, crawlers of AI search and assistants are welcome and listed by name, `Sitemap:` lines.
@@ -305,7 +305,7 @@ Every page, checked by the build (fail on any miss):
 
 - **Where**: `https://<name>.open.yety.ch/docs/`, in the same Pages project as the site. No Read the Docs, no separate domain.
 - **Stack**: the shared docs kit, built on Starlight (Astro) with Pagefind search, tree on the left, table of contents on the right, dark and light themes, the project accent. The kit is written once; a project brings only a config and its sources.
-- **Sources stay in the project repository** under `docs/` as plain Markdown, converted at deploy time (Sphinx/MyST, MkDocs or plain Markdown are all accepted). Translations use the suffix `page.fr.md` next to `page.md`, for the nine locales; the English page is the fallback.
+- **Sources stay in the project repository** under `docs/` as plain Markdown, converted at deploy time (Sphinx/MyST, MkDocs or plain Markdown are all accepted). Translations use the suffix `page.fr.md` next to `page.md`, for the four locales; the English page is the fallback.
 - **Config** per project (`project.config.json`): `name`, `title`, `description`, `subdomain`, `repo` (`yetysw/<name>`), `accent` (`green`, `blue`, `violet`, `amber` or a `{dark, light}` object), `logo`, `lang`, `locales`, `source`.
 - **Structure** (order of the sidebar):
   1. Home: what it is, a screenshot, three entry links (Install, first steps, the main concept).
@@ -348,7 +348,7 @@ The product UI is not the marketing site: it is where the work happens. DumbMoni
 |---|---|---|---|
 | Framework | Svelte 5 (runes only) | React | Choose by team. Same tokens either way |
 | Themes | Obsidian (dark default) plus a light console theme and public status pages | Dark and light, follows the system | Dark default; light optional, same token names |
-| UI language | Nine locales with Paraglide | English only | **Nine locales** if the app is for end users (below); English only is acceptable for an expert tool, and then say so |
+| UI language | Nine locales with Paraglide | English only | **Four locales** if the app is for end users (below); English only is acceptable for an expert tool, and then say so |
 | Brand hue in the app | Status hues only | No brand hue, hues = sensor family | No brand hue in the app. The accent is for sites |
 | Type | Geist and Geist Mono | Inter and JetBrains Mono | Inter and JetBrains Mono |
 
@@ -478,7 +478,7 @@ In this order.
 5. Make it run with `docker compose up -d` from a published image; write `.env.example`; add CI (7.5) with pinned actions (7.6) and the release workflow with SBOM, provenance and signatures.
 6. Write `docs/` and add the project config to the docs kit (section 5); check links.
 7. Build the site: tokens, top bar, hero with plates and rotating word, interactive animation, features with "what it does not do", download with Support block, footer and yety bar, 404 (section 4).
-8. Fill the nine string files; check titles, descriptions, hreflang, sitemap, `robots.txt`, `llms.txt`, JSON-LD (4.7).
+8. Fill the string files of the three translated languages; check titles, descriptions, hreflang, sitemap, `robots.txt`, `llms.txt`, JSON-LD (4.7).
 9. Build the static demo with fictional data and its CSP (4.9).
 10. Run the checks: 390 px without horizontal scroll, keyboard only, reduced motion, contrast, headers, no inline style, no external request.
 11. Create the Cloudflare Pages project `<name>`, point `<name>.open.yety.ch` at it, deploy.
