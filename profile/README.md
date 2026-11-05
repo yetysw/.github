@@ -4,12 +4,7 @@
 
 <h3>We are sysadmins in Switzerland. We build tools that make sysadmins' lives better, and we share them.</h3>
 
-<a href="https://www.yety.ch"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-website.svg" alt="Website: yety.ch" height="40"></a>
-<a href="https://github.com/sponsors/yetysw"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-sponsor.svg" alt="Sponsor us on GitHub" height="40"></a>
-<a href="https://github.com/yetysw/.github/blob/main/SECURITY.md"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-security.svg" alt="Security policy" height="40"></a>
-<a href="https://github.com/yetysw/.github/blob/main/GUIDELINES.md"><img src="https://raw.githubusercontent.com/yetysw/.github/main/profile/assets/btn-guidelines.svg" alt="Project guidelines" height="40"></a>
-
-<br>
+<p><a href="https://www.yety.ch">yety.ch</a> &nbsp;·&nbsp; <a href="https://github.com/sponsors/yetysw">Sponsor</a> &nbsp;·&nbsp; <a href="https://github.com/yetysw/.github/blob/main/SECURITY.md">Security</a> &nbsp;·&nbsp; <a href="https://github.com/yetysw/.github/blob/main/GUIDELINES.md">Guidelines</a></p>
 
 <table>
 <tr>
