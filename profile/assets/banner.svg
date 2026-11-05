@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 280" role="img" aria-label="yety: homemade IT tools, shared">
+  <defs><pattern id="g" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#ffffff" stroke-opacity=".05"/></pattern></defs>
+  <rect width="1280" height="280" rx="18" fill="#07080a"/>
+  <rect width="1280" height="280" rx="18" fill="url(#g)"/>
+  <g transform="translate(64 68) scale(2.25)"><rect width="64" height="64" rx="15" fill="#17181c"/><path transform="translate(32 32) scale(.72) translate(-32 -32)" fill="#fff" d="M9.5 7.200h9.900c.9 0 1.7.5 2.1 1.300L32 26.5 42.5 8.500c.4-.8 1.2-1.3 2.1-1.300h9.900c1.3 0 2.1 1.4 1.4 2.500L37.6 38.200V54c0 1.3-1 2.3-2.3 2.300h-6.600c-1.3 0-2.3-1-2.3-2.300V38.200L8.1 9.700C7.4 8.6 8.2 7.2 9.5 7.200z"/></g>
+  <text x="236" y="132" fill="#eceef1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="60" font-weight="600" letter-spacing="-1.2">yety</text>
+  <text x="238" y="182" fill="#c9ccd1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="28">Homemade IT tools, shared.</text>
+  <text x="1216" y="244" text-anchor="end" fill="#8b9098" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17">swiss it company · open source</text>
+</svg>
